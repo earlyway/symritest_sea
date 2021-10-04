@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
 <title>나의 타고난 자연의 모습은?</title>
-
+<!--sea-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" , user-scalable=no />
-    <meta property="og:url"           content="https://earlyway.github.io/" />
+    <meta property="og:url"           content="https://earlyway.github.io/symritest_sea" />
     <meta property="og:title"         content="나의 타고난 자연의 모습은?1" />
     <meta property="og:description"   content="생년월일로 알아보는 나의 타고난 성향 테스트1" />
     <meta property="og:image"         content="/share/kakao/input.jpg" />
@@ -31,6 +31,7 @@
 <body>
 
     <h1 class="main">
+	나의 타고난 자연의 모습은?
 
 
     </h1>
@@ -65,11 +66,12 @@
             <a href="javascript:sendLink()" id="kakao-link-btn" class="kakao"><img src="image/kakao.png"
                     alt="kakao_connect" id="kakao"></a>
             <!--<a href="http://twitter.com" target="_blank"><img src="image/twiter.png" alt="twt_connect" id="twt"></a>-->
-            <!--<a href="http://www.naver.com" target="_blank"><img src="image/url2.png" alt="url_connect" id="urll"></a>-->
+            <a href="javascript:copyToClipboard(val)" id="textarea" onclick="copy()" target="_self">
+                <img src="image/url2.png" alt="url_connect" id="urll"></a>
 
         </div>
         <div class="resultbottom">
-            <button name="restart" type="submit" id="restart" formaction="/index.html">다시하기</button>
+            <button name="restart" type="submit" id="restart" formaction="https://earlyway.github.io/">다시하기</button>
         </div>
     </form>
     <div class="footerpc">
@@ -100,10 +102,11 @@
                 objectType: 'feed',
                 content: {
                     title: '나의 타고난 자연의 모습은?',
-                    description: '생년월일로 알아보는 나의 타고난 성향 테스트',
-                    imageUrl: '/share/kakao/sea_.jpg',
+                    description: '바다처럼 마음이 넓고 잘 받아들이는 당신',
+                    imageUrl: 'https://i.imgur.com/iCFGJvt.jpg',
                     link: {
                         mobileWebUrl: 'https://earlyway.github.io/symritest_sea',
+                        webUrl: 'https://earlyway.github.io/symritest_sea'
                     },
                 },
                 buttons: [
@@ -111,16 +114,25 @@
                         title: '테스트 결과보기',
                         link: {
                             mobileWebUrl: 'https://earlyway.github.io/symritest_sea',
+                            webUrl: 'https://earlyway.github.io/symritest_sea'
                         },
                     },
                 ]
             });
         }
-
-
-        function moveHome(){
-            location.href = "/index.html";
+        function copyToClipboard(val) {
+            const t = document.createElement("textarea");
+            document.body.appendChild(t);
+            t.value = val;
+            t.select();
+            document.execCommand('copy');
+            document.body.removeChild(t);
         }
+        function copy() {
+            copyToClipboard('https://earlyway.github.io/symritest_sea');
+            console.log('Copied!');
+        }
+
     </script>
 </body>
 
